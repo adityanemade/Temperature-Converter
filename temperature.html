@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Temperature Convertor</title>
+
+		<!-- Styling -->
+		<style type="text/css">
+			body {
+				background-color: aliceblue;
+				margin: 2%;
+			}
+			.temp-para { margin-bottom: 3px !important; }
+			.temp-input {
+				width: 400px;
+				height: 20px;
+			}
+			.radio_btns {
+				margin: 20px 0 20px 90px;
+			}
+			.radio_btns > span {
+				margin-right: 10px;
+			}
+			.convert-btn {
+				margin-left: 130px;
+				width: 90px;
+				height: 20px;
+			}
+			.temp_results textarea {
+				width: 400px;
+				height: 100px;
+				text-align: center;
+    			font-size: 22px;
+			}
+		</style>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	</head>
+	<body>
+		<h1>Temperature Convertor</h1>
+		<div>
+			<p class="temp-para">Enter the temperature to be converted:</p>
+
+			<!-- Input to get the temperature from the user -->
+			<input class="temp-input" type="text" name="temperature" id="user_input" />
+
+			<div class="radio_btns">
+				<span><input type="radio" name="scale" value="F" checked /> Fahrenheit</span>
+				<span><input type="radio" name="scale" value="C" /> Celsius</span>
+			</div>
+
+			<div>
+				<button id="convert" class="convert-btn">Convert</button>
+			</div>
+
+		</div>
+
+		<div class="temp_results">
+			<h2>Results: </h2>
+			<textarea name="results_out" id="results_out" readonly></textarea>
+		</div>
+		<script type="text/javascript" src="temperature.js"></script>
+	</body>
+</html>
